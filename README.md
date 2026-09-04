@@ -42,7 +42,7 @@ export AE="$HF_PATH/black-forest-labs/FLUX.1-dev/ae.safetensors"
 
 export CACHE_POLICY="[1,0,1,0,1,0,1,2,2,1,2,2,2,1,2,0,2,1,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,2,1,2,2,1,1]"
 
-cd /root/autodl-tmp/YaleCache-FLUX
+cd /root/autodl-tmp/T3Cache-FLUX
 python src/sample_seed.py \
   --prompt_file /root/autodl-tmp/work/DrawBench200.txt \
   --width 1024 \
@@ -52,7 +52,7 @@ python src/sample_seed.py \
   --seed 42 \
   --num_images_per_prompt 1 \
   --model_name flux-dev \
-  --output_dir /root/autodl-tmp/work/yale_24_2_pre51_toca \
+  --output_dir /root/autodl-tmp/work/t3_24_2_pre51_toca \
   --add_sampling_metadata
 ```
 
@@ -65,7 +65,7 @@ Follow the [HunyuanVideo](https://github.com/Tencent/HunyuanVideo) official docu
 #### 2. Batch Inference Script
 
 ```Bash
-cd /root/autodl-tmp/FastHunyuan/YaleCache-HunyuanVideo
+cd /root/autodl-tmp/FastHunyuan/T3Cache-HunyuanVideo
 
 export CACHE_POLICY="[1,0,1,0,1,0,0,1,0,0,0,1,2,0,0,1,2,0,1,2,0,0,0,1,0,0,2,0,1,0,0,0,0,1,0,2,0,0,1,0,0,2,0,1,0,0,1,2,1,1]"
 python sample_video_vbench.py \
@@ -73,10 +73,10 @@ python sample_video_vbench.py \
   --cfg-scale 1.0 \
   --embedded-cfg-scale 6.0 \
   --model-resolution "720p" \
-  --model-base "/root/autodl-tmp/FastHunyuan/YaleCache-HunyuanVideo/ckpts" \
-  --dit-weight "/root/autodl-tmp/FastHunyuan/YaleCache-HunyuanVideo/ckpts/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states.pt" \
-  --vbench-json-path "/root/autodl-tmp/FastHunyuan/YaleCache-HunyuanVideo/eval/VBench_full_info.json" \
-  --save-path "/root/autodl-tmp/FastHunyuan/YaleCache-HunyuanVideo/eval/yale-0.4" \
+  --model-base "/root/autodl-tmp/FastHunyuan/T3Cache-HunyuanVideo/ckpts" \
+  --dit-weight "/root/autodl-tmp/FastHunyuan/T3Cache-HunyuanVideo/ckpts/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states.pt" \
+  --vbench-json-path "/root/autodl-tmp/FastHunyuan/T3Cache-HunyuanVideo/eval/VBench_full_info.json" \
+  --save-path "/root/autodl-tmp/FastHunyuan/T3Cache-HunyuanVideo/eval/t3-0.4" \
   --save-path-suffix "" \
   --name-suffix "" \
   --load-key "module" \
