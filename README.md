@@ -6,9 +6,9 @@
 
 ## 🌠 Intro
 
-![Framework](fig/T³Cache.png)
+![Framework](fig/T3Cache.png)
 
-Diffusion Transformers (DiTs) achieve state-of-the-art generation quality but incur high computational costs. Feature caching offers a promising acceleration solution by reusing intermediate outputs, yet existing methods suffer from fixed caching intervals that misalign with DiTs' non-uniform temporal dynamics and lack cross-dimensional error awareness. We propose **T³Cache**, a training-free multi-granularity adaptive caching framework that addresses these issues via residual cache policy search, Gaussian mixture policy modeling, and adaptive selective computation, systematically mitigating error accumulation across **T**imestep, **T**ransformer-layer, and **T**oken dimensions. Extensive experiments on FLUX.1-dev and HunyuanVideo show that T³Cache achieves up to **4.50×** and **2.46×** acceleration for image and video generation with minimal quality loss, significantly outperforming existing caching methods.
+Diffusion Transformers (DiTs) based generation models achieve state-of-the-art generation quality but incur substantial computational costs. Feature caching offers a promising acceleration solution by reusing intermediate outputs, yet existing methods suffer from fixed caching intervals that misalign with DiTs' non-uniform temporal dynamics and lack cross-dimensional error awareness. We propose **T³Cache**, a training-free multi-granularity adaptive caching framework that addresses these issues via residual cache policy search, Gaussian mixture policy modeling, and adaptive selective computation, to systematically mitigate error accumulation across **T**imestep, **T**ransformer-layer, and **T**oken dimensions. Extensive experiments with FLUX.1-dev and HunyuanVideo show that T³Cache achieves up to **4.50×** and **2.46×** acceleration for image and video generation with minimal quality loss, significantly outperforming existing caching methods.
 
 _**Index Terms—**_ AIGC, Acceleration, DiT, Training-free, Feature Caching
 
@@ -95,7 +95,6 @@ python sample_video_vbench.py \
 
 ## 🙏 Acknowledgment
 
-- Thanks to [DiT](https://github.com/facebookresearch/DiT) for their great work and codebase upon which we build TaylorSeer-DiT.
 - Thanks to [FLUX](https://github.com/black-forest-labs/flux) for their great work and codebase upon which we build TaylorSeer-FLUX.
 - Thanks to [HunyuanVideo](https://github.com/Tencent/HunyuanVideo) for their great work and codebase upon which we build TaylorSeer-HunyuanVideo.
 - Thanks to [ImageReward](https://github.com/THUDM/ImageReward) for Text-to-Image quality evaluation.
