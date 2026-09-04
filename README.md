@@ -95,8 +95,8 @@ python sample_video_vbench.py \
 
 ## 🙏 Acknowledgment
 
-- Thanks to [FLUX](https://github.com/black-forest-labs/flux) for their great work and codebase upon which we build TaylorSeer-FLUX.
-- Thanks to [HunyuanVideo](https://github.com/Tencent/HunyuanVideo) for their great work and codebase upon which we build TaylorSeer-HunyuanVideo.
+- Thanks to [FLUX](https://github.com/black-forest-labs/flux) for their great work and codebase upon which we build T3Cache-FLUX.
+- Thanks to [HunyuanVideo](https://github.com/Tencent/HunyuanVideo) for their great work and codebase upon which we build T3Cache-HunyuanVideo.
 - Thanks to [ImageReward](https://github.com/THUDM/ImageReward) for Text-to-Image quality evaluation.
 - Thanks to [VBench](https://github.com/Vchitect/VBench) for Text-to-Video quality evaluation.
 
